@@ -1,1 +1,3 @@
-Bob likes cats
+<<<<<<< HEAD
+Alice and Bob like cats
+>>>>>>> 15996c608605bf6a509f095a326af61a2d8c663e
