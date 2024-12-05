@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>My New Webpage</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h1>Another Heading</h1>
+
+    <script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/m.js">
+        if (document.querySelector('math')) {
+            document.querySelectorAll('math').forEach(function(elm) {
+                elm.setAttribute('st', ''); 
+            });
+
+            window.D2L.MathJax.loadMathJax({
+                outputScale: 1.5,
+                renderLatex: true,
+                enableMML3Support: false
+            });
+        }
+    </script>
+
+    <script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/code.js">
+        document.querySelectorAll('.d2l-code').forEach(function(c) {
+            window.D2L.Prism.formatCodeElement(c);
+        });
+    </script>
+
+    <script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/embed.js">
+        window.D2L.EmbedRenderer.renderEmbeds(document);
+    </script>
+</body>
+</html>
